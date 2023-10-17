@@ -1,7 +1,7 @@
+@import 'src/styles/mixin.scss';
+
 .Main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   .post-list {
     margin-top: 40px;
     .post-container {

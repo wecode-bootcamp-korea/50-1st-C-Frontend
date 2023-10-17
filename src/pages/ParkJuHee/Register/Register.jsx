@@ -39,8 +39,7 @@ const Register = () => {
     let body = {
       email: email,
       password: password,
-      name: userName,
-
+      nickname: userName,
       phoneNumber: userPhone,
       birthday: userBirth,
     };
@@ -186,7 +185,7 @@ const Register = () => {
                 className="btn"
                 disabled={
                   !isValid ||
-                  password.length < 5 ||
+                  password.length < 10 ||
                   password !== passwordConfirm
                 }
               >

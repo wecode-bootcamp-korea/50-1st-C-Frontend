@@ -1,4 +1,5 @@
-@import '../../../styles/mixin.scss';
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
 
 .optionBox {
   position: relative;
@@ -10,9 +11,9 @@
   }
   .select {
     position: absolute;
-    background-color: #fff;
+    background-color: $theme-white;
     width: 100%;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $theme-gray-light;
     display: block;
     border-radius: 6px;
     .selected {
@@ -21,22 +22,22 @@
       padding: 16px;
     }
     .selected-value {
-      color: #000;
+      color: $theme-black;
     }
     .arrow {
       position: relative;
       font-size: 20px;
       padding-left: 10px;
       text-decoration: none;
-      color: #e0e0e0;
+      color: $theme-gray-light;
       &::after {
         content: '';
         position: absolute;
         width: 5px;
         height: 5px;
         top: 2.5px;
-        border-top: 1px solid #999;
-        border-left: 1px solid #999;
+        border-top: 1px solid $theme-gray-strong;
+        border-left: 1px solid $theme-gray-strong;
         transform: rotate(-135deg);
       }
     }
@@ -46,7 +47,7 @@
       .option {
         display: block;
         font-size: 16px;
-        color: #999;
+        color: $theme-gray-strong;
         padding: 16px;
       }
     }

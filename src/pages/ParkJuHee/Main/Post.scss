@@ -1,8 +1,11 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
 .Post {
   width: 512px;
   .post-list {
     padding: 0 8px 24px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $theme-gray-light;
     .writer-desktop {
       display: flex;
       justify-content: space-between;
@@ -16,7 +19,7 @@
           height: 48px;
           border-radius: 50%;
           object-fit: cover;
-          border: 1px solid #999;
+          border: 1px solid $theme-gray-strong;
         }
         .nickname {
           margin-left: 16px;
@@ -39,7 +42,7 @@
   }
   .reply_area {
     .reply_count {
-      color: #999;
+      color: $theme-gray-strong;
     }
   }
 }
