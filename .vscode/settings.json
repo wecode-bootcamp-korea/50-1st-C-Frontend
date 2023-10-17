@@ -6,5 +6,8 @@
     "source.fixAll.eslint": true
   },
   "javascript.format.enable": false,
+  "prettier.eslintIntegration": true,
+  "prettier.disableLanguages": ["js"],
+  "eslint.alwaysShowStatus": true,
   "files.autoSave": "onFocusChange"
 }

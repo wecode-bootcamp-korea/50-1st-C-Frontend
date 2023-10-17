@@ -1,0 +1,104 @@
+$border_color: #e0e0e0;
+$button_default_color: #2d71f7;
+$button_hover_color: #083e7f;
+
+.login_page {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: -200px;
+    .big_logo {
+      position: relative;
+      top: -10px;
+    }
+    .small_logo {
+      position: relative;
+      bottom: -15px;
+    }
+  }
+  .input_login_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 400px;
+
+    .email,
+    .password {
+      width: 450px;
+      padding: 15px;
+      margin-top: 7px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+
+  .login_button_frame {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .login_button {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: $button_default_color;
+      font-weight: bolder;
+      font-size: 16px;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .side_button_frame {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+
+    .signup_button {
+      position: relative;
+      left: 50px;
+      border: none;
+      background: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .password_button {
+      position: relative;
+      right: 30px;
+      border: none;
+      background: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .wall {
+      color: $border_color;
+      position: relative;
+      top: 2px;
+      right: -12px;
+    }
+  }
+}
