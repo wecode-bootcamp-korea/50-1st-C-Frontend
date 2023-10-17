@@ -6,5 +6,5 @@
     "source.fixAll.eslint": true
   },
   "javascript.format.enable": false,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "off"
 }

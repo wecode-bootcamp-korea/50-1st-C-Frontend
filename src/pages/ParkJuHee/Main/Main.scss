@@ -2,13 +2,31 @@
 
 .Main {
   @include flexCenter;
+  height: 80vh;
   .post-list {
-    margin-top: 40px;
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .post-container {
       margin: 0 24px;
+      height: 100%;
+      .post {
+        margin-bottom: 24px;
+      }
     }
-    .post {
-      margin-bottom: 24px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20%;
+    margin-bottom: 40px;
+    .btn {
+      width: 120px;
+      height: 56px;
     }
   }
 }

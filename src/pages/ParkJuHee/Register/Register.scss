@@ -2,8 +2,7 @@
 @import 'src/styles/mixin.scss';
 
 .register {
-  width: 100%;
-  @include flexCenter;
+  width: 512px;
 
   input,
   select {
@@ -13,31 +12,6 @@
 
   option {
     background-color: $theme-white;
-  }
-
-  header {
-    height: 40px;
-    margin: 0 24px;
-    padding: 8px;
-  }
-
-  .back-btn {
-    position: relative;
-    font-size: 20px;
-    padding-left: 10px;
-    text-decoration: none;
-    color: $theme-black;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      top: 2px;
-      left: -10px;
-      border-top: 2px solid $theme-black;
-      border-left: 2px solid $theme-black;
-      transform: rotate(-45deg);
-    }
   }
 
   .label {
@@ -56,10 +30,9 @@
       color: $theme-black;
       font-size: 16px;
     }
-  }
-
-  .main-form-container {
-    margin: 24px;
+    .required {
+      color: $theme-red;
+    }
   }
   .page-title-info {
     display: inline-block;
@@ -103,7 +76,6 @@
   }
 
   .submit-btn {
-    padding-top: 24px;
     padding-bottom: 40px;
   }
 

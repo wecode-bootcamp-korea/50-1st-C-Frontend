@@ -1,0 +1,25 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.Nav {
+  margin: 24px auto;
+  padding: 8px;
+  .back-btn {
+    position: relative;
+    font-size: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: $theme-black;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 2px;
+      left: -10px;
+      border-top: 2px solid $theme-black;
+      border-left: 2px solid $theme-black;
+      transform: rotate(-45deg);
+    }
+  }
+}

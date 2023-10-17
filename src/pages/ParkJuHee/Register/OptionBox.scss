@@ -16,6 +16,9 @@
     border: 1px solid $theme-gray-light;
     display: block;
     border-radius: 6px;
+    &:focus {
+      border: 1px solid $theme-black;
+    }
     .selected {
       display: flex;
       justify-content: space-between;

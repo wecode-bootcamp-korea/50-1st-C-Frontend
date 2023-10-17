@@ -1,7 +1,6 @@
 // Register.js
 import React, { useState } from 'react';
 import './Register.scss';
-import { Link } from 'react-router-dom';
 import OptionBox from './OptionBox';
 
 const Register = () => {
@@ -61,11 +60,6 @@ const Register = () => {
   return (
     <div className="register">
       <div className="container">
-        <header>
-          <Link to="/" className="back-btn">
-            뒤로
-          </Link>
-        </header>
         <div className="main-form-container">
           <form className="register-form" onSubmit={handleSubmit}>
             <div className="page-title-info">
@@ -74,7 +68,7 @@ const Register = () => {
             <div className="email-info">
               <div className="label-options">
                 <label htmlFor="userEmail">기본정보</label>
-                <p style={{ color: '#FF3636' }}>필수사항</p>
+                <p className="required">필수사항</p>
               </div>
 
               <input
@@ -112,7 +106,7 @@ const Register = () => {
             <div className="name-info">
               <div className="label-options">
                 <label htmlFor="name">닉네임과 프로필 이미지</label>
-                <p>선택사항</p>
+                <p className="required">필수사항</p>
               </div>
               <input
                 type="text"

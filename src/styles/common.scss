@@ -1,6 +1,15 @@
 @import 'src/styles/variable.scss';
 @import 'src/styles/mixin.scss';
 
+body {
+  min-height: 80vh;
+  @include flexCenter;
+}
+
+.root {
+  height: 100vh;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Apple SD Gothic Neo', Pretendard, 'Noto Sans KR';
@@ -12,27 +21,23 @@
 }
 
 .container {
-  width: 576px;
-  height: 100vh;
+  max-width: 512px;
 }
 
-input,
-select {
+input {
   width: 100%;
   height: 50px;
   border: 1px solid $theme-gray-light;
   border-radius: 6px;
   font-size: 16px;
   color: $theme-black;
-}
-
-input:focus {
-  outline: none;
-  border: 1px solid $theme-black;
-}
-
-input::placeholder {
-  color: $theme-gray-strong;
+  &:focus {
+    outline: none;
+    border: 1px solid $theme-black;
+  }
+  &::placeholder {
+    color: $theme-gray-strong;
+  }
 }
 
 .btn {
@@ -45,11 +50,17 @@ input::placeholder {
   background-color: $theme-blue;
   font-weight: 800;
   font-size: 18px;
-  &:hover {
+  &:hover,
+  &:active {
     cursor: pointer;
+    background-color: $theme-navy;
   }
   &[disabled] {
-    background-color: $theme-gray-strong;
+    background-color: $theme-gray-normal;
     cursor: default;
   }
+}
+
+.required {
+  color: $theme-red;
 }

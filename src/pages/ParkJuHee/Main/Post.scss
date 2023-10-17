@@ -4,7 +4,7 @@
 .Post {
   width: 512px;
   .post-list {
-    padding: 0 8px 24px;
+    padding: 24px 8px;
     border-bottom: 1px solid $theme-gray-light;
     .writer-desktop {
       display: flex;
@@ -28,7 +28,7 @@
         }
       }
       .created-time {
-        color: #999;
+        color: $theme-gray-strong;
       }
     }
   }
@@ -40,8 +40,8 @@
       line-height: 28px;
     }
   }
-  .reply_area {
-    .reply_count {
+  .reply-area {
+    .reply-count {
       color: $theme-gray-strong;
     }
   }
