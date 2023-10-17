@@ -4,5 +4,5 @@
 
 ---
 
-Front : 김성호, 박주희
-Back : 이재현, 최현수
+Front-end : 김성호, 박주희
+Back-end : 최현수, 이재현
