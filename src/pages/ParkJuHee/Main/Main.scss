@@ -1,0 +1,14 @@
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .post-list {
+    margin-top: 40px;
+    .post-container {
+      margin: 0 24px;
+    }
+    .post {
+      margin-bottom: 24px;
+    }
+  }
+}

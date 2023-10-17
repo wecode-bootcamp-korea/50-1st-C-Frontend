@@ -1,0 +1,45 @@
+.Post {
+  width: 512px;
+  .post-list {
+    padding: 0 8px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    .writer-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .user-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile-thumb {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 1px solid #999;
+        }
+        .nickname {
+          margin-left: 16px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      .created-time {
+        color: #999;
+      }
+    }
+  }
+  .content-area {
+    margin: 16px 0;
+    max-height: 112px;
+    .content {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  .reply_area {
+    .reply_count {
+      color: #999;
+    }
+  }
+}

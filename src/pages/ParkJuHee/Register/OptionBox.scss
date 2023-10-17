@@ -1,0 +1,54 @@
+@import '../../../styles/mixin.scss';
+
+.optionBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 6px;
+  &:last-child {
+    margin-right: 0;
+  }
+  .select {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    display: block;
+    border-radius: 6px;
+    .selected {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+    }
+    .selected-value {
+      color: #000;
+    }
+    .arrow {
+      position: relative;
+      font-size: 20px;
+      padding-left: 10px;
+      text-decoration: none;
+      color: #e0e0e0;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 2.5px;
+        border-top: 1px solid #999;
+        border-left: 1px solid #999;
+        transform: rotate(-135deg);
+      }
+    }
+    ul {
+      max-height: 144px;
+      overflow-y: scroll;
+      .option {
+        display: block;
+        font-size: 16px;
+        color: #999;
+        padding: 16px;
+      }
+    }
+  }
+}

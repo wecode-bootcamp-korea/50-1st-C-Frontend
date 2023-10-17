@@ -1,0 +1,112 @@
+@import '../../../styles/mixin.scss';
+
+.register {
+  width: 100%;
+  @include flexCenter;
+
+  input,
+  select {
+    padding: 0 16px;
+    margin: 10px 0;
+  }
+
+  option {
+    background-color: #fff;
+  }
+
+  header {
+    height: 40px;
+    margin: 0 24px;
+    padding: 8px;
+  }
+
+  .back-btn {
+    position: relative;
+    font-size: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #000;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 2px;
+      left: -10px;
+      border-top: 2px solid #000;
+      border-left: 2px solid #000;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .label {
+    display: inline;
+  }
+
+  .label-options {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: #999;
+      margin: 0;
+      font-size: 12px;
+    }
+    .label {
+      color: #000;
+      font-size: 16px;
+    }
+  }
+
+  .main-form-container {
+    margin: 24px;
+  }
+  .page-title-info {
+    display: inline-block;
+    padding: 6px 0;
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+    }
+  }
+
+  .email-info {
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .phone-number-info {
+    .phone-front {
+      width: 170px;
+      display: inline-block;
+      margin-right: 8px;
+      z-index: 1;
+    }
+    .phone-number {
+      display: flex;
+      justify-content: space-between;
+      input {
+        display: inline-block;
+      }
+    }
+  }
+  .birthday-info {
+    .birthday-select {
+      height: 86px;
+      .btn-date {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .submit-btn {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  [class$='-info'] {
+    margin-bottom: 24px;
+  }
+}
