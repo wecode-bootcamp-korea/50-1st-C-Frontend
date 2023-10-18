@@ -4,7 +4,10 @@
 .Nav {
   margin: 24px auto;
   padding: 8px;
-  .back-btn {
+  &:hover {
+    cursor: pointer;
+  }
+  .back-nav {
     position: relative;
     font-size: 20px;
     padding-left: 10px;

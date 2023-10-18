@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
 import './Main.scss';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   const [postList, setPostList] = useState([]);
@@ -12,6 +13,7 @@ const Main = () => {
         setPostList(data);
       });
   }, []);
+
   if (postList.length <= 0) {
     return null;
   }
@@ -23,10 +25,11 @@ const Main = () => {
           <div className="post">
             {postList.map((post) => (
               <Post
-                key={post.id}
+                key={post.postId}
                 nickname={post.nickname}
+                profileImage={post.profileImage}
                 content={post.content}
-                created_at={post.created_at}
+                created_at={post.createdAt}
               />
             ))}
           </div>
@@ -34,7 +37,11 @@ const Main = () => {
       </div>
       <div className="footer">
         <div className="write-container">
-          <button className="btn">글쓰기</button>
+          <div className="write-btn">
+            <Link to="/write" className="btn">
+              글쓰기
+            </Link>
+          </div>
         </div>
       </div>
     </div>

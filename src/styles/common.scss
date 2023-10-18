@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 512px;
+  min-width: 512px;
 }
 
 input {
@@ -40,7 +40,7 @@ input {
   }
 }
 
-.btn {
+[class$='btn'] {
   margin: 16px 0;
   width: 100%;
   height: 56px;
@@ -61,6 +61,40 @@ input {
   }
 }
 
+[class$='btn-border'] {
+  margin: 16px 0;
+  width: 100%;
+  height: 56px;
+  color: $theme-blue;
+  border: 1px solid $theme-blue;
+  border-radius: 6px;
+  background-color: $theme-white;
+  font-weight: 800;
+  font-size: 18px;
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: $theme-navy;
+    border: 1px solid $theme-navy;
+  }
+  &[disabled] {
+    background-color: $theme-gray-normal;
+    cursor: default;
+  }
+}
+
 .required {
   color: $theme-red;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.profile-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $theme-gray-strong;
 }

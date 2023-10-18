@@ -10,7 +10,7 @@ const Nav = () => {
 
   return (
     <div className="Nav">
-      <p onClick={back} className="back-btn">
+      <p onClick={back} className="back-nav">
         뒤로
       </p>
     </div>

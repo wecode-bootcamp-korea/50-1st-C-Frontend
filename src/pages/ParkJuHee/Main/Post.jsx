@@ -1,17 +1,13 @@
 import React from 'react';
 import './Post.scss';
 
-const Post = ({ nickname, content, created_at }) => {
+const Post = ({ nickname, profileImage, content, created_at }) => {
   return (
     <div className="Post">
       <div className="post-list">
         <div className="writer-desktop">
           <div className="user-container">
-            <img
-              className="profile-thumb"
-              src="/images/sample.png"
-              alt="프로필"
-            />
+            <img className="profile-thumb" src={profileImage} alt="프로필" />
             <p className="nickname">{nickname}</p>
           </div>
           <p className="created-time">{created_at}</p>

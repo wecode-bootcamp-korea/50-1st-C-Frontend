@@ -46,7 +46,10 @@
     }
     ul {
       max-height: 144px;
-      overflow-y: scroll;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .option {
         display: block;
         font-size: 16px;

@@ -1,50 +1,44 @@
 [
   {
-    "id": 1,
-    "userId": 1,
-    "nickname": "username1",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
-    "created_at": "110112",
-    "updated_at": "20231017"
+    "postId": 1,
+    "nickname": "wecode",
+    "profileImage": "https://www.chemicalnews.co.kr/news/photo/202107/4159_10727_3352.png",
+    "content": "일라이자 효과는 인간의 사고 과정과 감정을 어쩌고저쩌고 엄청길게일라이자 효과는 인간의 사고 과정과 감정을 어쩌고 저쩌고",
+    "createdAt": "2023-08-16"
   },
   {
-    "id": 2,
-    "userId": 2,
-    "nickname": "username2",
-    "content": "피자",
-    "created_at": "123121",
-    "updated_at": "20231011"
+    "postId": 2,
+    "nickname": "wecode",
+    "profileImage": "https://hamtopia.com/web/product/tiny/202306/4990d9e0c64dcf0342ee120905977429.jpg",
+    "content": "배고파",
+    "createdAt": "2023-08-16"
   },
   {
-    "id": 3,
-    "userId": 3,
-    "nickname": "username3",
-    "content": "집에갈래요",
-    "created_at": "123121",
-    "updated_at": "20221010"
+    "postId": 3,
+    "nickname": "wecode",
+    "profileImage": "https://images.mypetlife.co.kr/content/uploads/2019/09/09152804/ricky-kharawala-adK3Vu70DEQ-unsplash.jpg",
+    "content": "집 에 보 내 죠",
+    "createdAt": "2023-08-16"
   },
   {
-    "id": 4,
-    "userId": 4,
-    "nickname": "username4",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
-    "created_at": "110112",
-    "updated_at": "20231017"
+    "postId": 4,
+    "nickname": "wecode",
+    "profileImage": "https://img.freepik.com/premium-photo/fluffy-dwarf-hamster-lies-front-view_109543-618.jpg",
+    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+    "createdAt": "2023-08-16"
   },
   {
-    "id": 5,
-    "userId": 5,
-    "nickname": "usernamezzz",
-    "content": "awdawad",
-    "created_at": "123121",
-    "updated_at": "20231011"
+    "postId": 5,
+    "nickname": "wecode",
+    "profileImage": "https://img.famtimes.co.kr/resources/2018/05/22/7J6ugOP2q6T7Z9Xy.jpg",
+    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+    "createdAt": "2023-08-16"
   },
   {
-    "id": 6,
-    "userId": 6,
-    "nickname": "username3",
-    "content": "zzzzzddwadewdewqwq",
-    "created_at": "123121",
-    "updated_at": "20221010"
+    "postId": 6,
+    "nickname": "wecode",
+    "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Xyj1ftWWW5ZjpyALJbMJ-mZwZLGAj_JLsTVAL2MKF7ULNCj7KGR5V6f4uJP8Msr7H3s&usqp=CAU",
+    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+    "createdAt": "2023-08-16"
   }
 ]

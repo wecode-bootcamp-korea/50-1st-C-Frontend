@@ -3,6 +3,7 @@
 .Main {
   @include flexCenter;
   height: 80vh;
+  margin-top: 40px;
   .post-list {
     height: 100%;
     overflow: auto;
@@ -23,10 +24,16 @@
     position: fixed;
     bottom: 20px;
     right: 20%;
-    margin-bottom: 40px;
-    .btn {
-      width: 120px;
-      height: 56px;
+    .write-container {
+      .write-btn {
+        text-align: center;
+        .btn {
+          display: block;
+          padding: 20px;
+          width: 120px;
+          height: 56px;
+        }
+      }
     }
   }
 }

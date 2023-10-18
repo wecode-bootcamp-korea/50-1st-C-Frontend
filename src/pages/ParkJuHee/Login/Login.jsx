@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isValid, setIsValid] = useState(false);
@@ -19,8 +20,34 @@ const Login = () => {
     return emailPattern.test(email);
   };
 
+  const handleLogin = (body) => {
+    fetch('http://localhost:8000/user/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === 'LOGIN SUCCESS') {
+          console.log('success :', data);
+          navigate('/main');
+          localStorage.setItem('token', data.accessToken);
+        } else {
+          console.log('failed :', data);
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    let body = {
+      email: email,
+      password: password,
+    };
+    handleLogin(body);
   };
 
   return (
@@ -56,7 +83,7 @@ const Login = () => {
             <button
               type="submit"
               className="btn"
-              disabled={!isValid || password.length < 5}
+              disabled={!isValid || password.length < 10}
             >
               로그인
             </button>
@@ -64,12 +91,14 @@ const Login = () => {
           <div className="login-options">
             <ul>
               <li>
-                <Link to="/register" className="link_btn">
+                <Link to="/register" className="link">
                   회원 가입
                 </Link>
               </li>
               <li>
-                <a href="/">비밀번호 찾기</a>
+                <Link to="/" className="link">
+                  비밀번호 찾기
+                </Link>
               </li>
             </ul>
           </div>
