@@ -1,0 +1,81 @@
+.compliete {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header_frame {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-bottom: 150px;
+    .backButton_icon {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: -3px;
+      left: -180px;
+    }
+    .button_back {
+      border: none;
+      background: none;
+      font-size: 17px;
+      padding-left: 25px;
+      position: relative;
+      top: -7px;
+      left: -195px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .compliete_icon_frame {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    .compliete_icon {
+      width: 136px;
+      height: 136px;
+    }
+  }
+  .compliete_text_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 230px;
+    .compliete_text {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    .login_text {
+      font-size: 15px;
+      margin-top: 15px;
+      color: #999999;
+    }
+  }
+
+  .check_button_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .check_button {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2d71f7;
+      font-weight: bolder;
+      font-size: 16px;
+      color: white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

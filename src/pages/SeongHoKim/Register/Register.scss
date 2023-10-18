@@ -1,8 +1,220 @@
+$border_color: #e0e0e0;
+$optional_color: #999999;
+$button_default_color: #2d71f7;
+$button_hover_color: #083e7f;
+$button_Disable_color: #cccccc;
+
 .register_page {
   width: 100%;
   height: 100vh;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .header_frame {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    .button_icon {
+      width: 15px;
+      height: 15px;
+
+      position: relative;
+      top: -8px;
+      left: -192px;
+    }
+    .back_button {
+      border: none;
+      background: none;
+      font-size: 16px;
+      position: relative;
+      left: -190px;
+      top: -25px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .signup_main_text {
+      font-weight: bolder;
+      font-size: 20px;
+      position: relative;
+      left: -190px;
+    }
+  }
+
+  .info_input_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text_info_frame {
+      display: flex;
+      flex-direction: row;
+      .info {
+        font-size: 13px;
+        position: relative;
+        left: -180px;
+      }
+      .Required {
+        font-size: 11px;
+        color: red;
+        position: relative;
+        right: -180px;
+      }
+    }
+    .email_input,
+    .password_input,
+    .re_password_input {
+      width: 450px;
+      padding: 15px;
+      margin-top: 7px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+      &::placeholder {
+        $border_color: #e0e0e0;
+      }
+    }
+  }
+
+  .nickname_info_frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    .text_nickname_frame {
+      display: flex;
+      flex-direction: row;
+      .nickname_info_text {
+        font-size: 13px;
+        position: relative;
+        left: -185px;
+        top: -7px;
+      }
+      .optional_info_text {
+        color: $optional_color;
+        font-size: 11px;
+        position: relative;
+        right: -185px;
+        top: -7px;
+      }
+    }
+    .nickname {
+      width: 450px;
+      padding: 15px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+    }
+  }
+
+  .signup_button_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    .signup_button {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bolder;
+      background-color: $button_default_color;
+      color: white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .disabled_signup_button {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bolder;
+      background-color: $button_Disable_color;
+      color: white;
+    }
+  }
+  .phone_number_frame {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    .phone_text {
+      font-size: 13px;
+      position: relative;
+      top: -8px;
+      left: -180px;
+    }
+    .optional_info_text {
+      color: $optional_color;
+      font-size: 11px;
+      position: relative;
+      top: -8px;
+      right: -180px;
+    }
+  }
+  .phonenumber_select_frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .phonenumber_select {
+      width: 100px;
+      height: 47px;
+      padding: 15px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+      color: $optional_color;
+    }
+    .phonenumber {
+      width: 340px;
+      padding: 15px;
+      margin-left: 7px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+      &::placeholder {
+        color: $optional_color;
+      }
+    }
+  }
+  .birthday_frame {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    .birthday_text {
+      font-size: 13px;
+      position: relative;
+      left: -190px;
+    }
+    .selected_text03 {
+      color: $optional_color;
+      font-size: 11px;
+      position: relative;
+      right: -190px;
+    }
+  }
+  .birthday_select_frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    .year {
+      width: 100px;
+      height: 47px;
+      padding: 15px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+      color: $optional_color;
+    }
+    .month,
+    .day {
+      width: 165px;
+      height: 47px;
+      padding: 15px;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+      margin-left: 7px;
+      color: $optional_color;
+    }
+  }
 }

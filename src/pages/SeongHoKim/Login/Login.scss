@@ -1,6 +1,7 @@
 $border_color: #e0e0e0;
 $button_default_color: #2d71f7;
 $button_hover_color: #083e7f;
+$button_Disable_color: #cccccc;
 
 .login_page {
   width: 100%;
@@ -66,6 +67,16 @@ $button_hover_color: #083e7f;
       &:hover {
         cursor: pointer;
       }
+    }
+    .disable_login_button {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: $button_Disable_color;
+      font-weight: bolder;
+      font-size: 16px;
+      color: white;
     }
   }
 

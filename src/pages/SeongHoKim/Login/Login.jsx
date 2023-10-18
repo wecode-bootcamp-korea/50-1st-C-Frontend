@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.scss';
 import logo1 from './Wecode_Logo01.png';
 import logo2 from './Wecode_Logo02.png';
@@ -10,6 +10,43 @@ const Login = () => {
   const goToSignUp = () => {
     moveNavigate('/Register');
   };
+  // input 입력(id)
+  const [id, setID] = useState('');
+  const saveUserID = event => {
+    setID(event.target.value);
+  };
+
+  // input 입력(pw)
+  const [pw, setPW] = useState('');
+  const saveUserPW = event => {
+    setPW(event.target.value);
+  };
+  // ID, PW 조건 : 아이디는 @와 .이 포함되고 비밀번호는 10글자 이상일때
+  const isInvalid = id.includes('@', '.') && pw.length >= 10;
+  // 로그인 버튼 클릭
+  const goToMain = () => {
+    fetch('http://10.58.52.212:8000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.message === 'LOGIN_SUCCESS') {
+          alert('입력값을 확인해 주세요.');
+        } else {
+          alert('로그인 되었습니다.');
+          localStorage.setItem('token', data.message);
+          moveNavigate('/main');
+        }
+      });
+  };
+
   return (
     <div className="login_page">
       <div className="logo_frame">
@@ -17,14 +54,26 @@ const Login = () => {
         <img className="small_logo" src={logo2} alt="위코드 로고2"></img>
       </div>
       <div className="input_login_frame">
-        <input className="email" type="text" placeholder="이메일"></input>
+        <input
+          className="email"
+          type="text"
+          placeholder="이메일"
+          onChange={saveUserID}
+        ></input>
         <input
           className="password"
           type="password"
           placeholder="비밀번호"
+          onChange={saveUserPW}
         ></input>
         <div className="login_button_frame">
-          <button className="login_button">로그인</button>
+          <button
+            className={isInvalid ? 'login_button' : 'disable_login_button'}
+            disabled={isInvalid ? false : true}
+            onClick={goToMain}
+          >
+            로그인
+          </button>
         </div>
         <div className="side_button_frame">
           <button className="signup_button" onClick={goToSignUp}>
