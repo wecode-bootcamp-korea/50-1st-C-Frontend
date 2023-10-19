@@ -1,44 +1,52 @@
-[
-  {
-    "postId": 1,
-    "nickname": "wecode",
-    "profileImage": "https://www.chemicalnews.co.kr/news/photo/202107/4159_10727_3352.png",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을 어쩌고저쩌고 엄청길게일라이자 효과는 인간의 사고 과정과 감정을 어쩌고 저쩌고",
-    "createdAt": "2023-08-16"
-  },
-  {
-    "postId": 2,
-    "nickname": "wecode",
-    "profileImage": "https://hamtopia.com/web/product/tiny/202306/4990d9e0c64dcf0342ee120905977429.jpg",
-    "content": "배고파",
-    "createdAt": "2023-08-16"
-  },
-  {
-    "postId": 3,
-    "nickname": "wecode",
-    "profileImage": "https://images.mypetlife.co.kr/content/uploads/2019/09/09152804/ricky-kharawala-adK3Vu70DEQ-unsplash.jpg",
-    "content": "집 에 보 내 죠",
-    "createdAt": "2023-08-16"
-  },
-  {
-    "postId": 4,
-    "nickname": "wecode",
-    "profileImage": "https://img.freepik.com/premium-photo/fluffy-dwarf-hamster-lies-front-view_109543-618.jpg",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
-    "createdAt": "2023-08-16"
-  },
-  {
-    "postId": 5,
-    "nickname": "wecode",
-    "profileImage": "https://img.famtimes.co.kr/resources/2018/05/22/7J6ugOP2q6T7Z9Xy.jpg",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
-    "createdAt": "2023-08-16"
-  },
-  {
-    "postId": 6,
-    "nickname": "wecode",
-    "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Xyj1ftWWW5ZjpyALJbMJ-mZwZLGAj_JLsTVAL2MKF7ULNCj7KGR5V6f4uJP8Msr7H3s&usqp=CAU",
-    "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
-    "createdAt": "2023-08-16"
-  }
-]
+{
+  "message": [
+    {
+      "id": 1,
+      "nickname": "wecode",
+      "profile_image": "https://www.chemicalnews.co.kr/news/photo/202107/4159_10727_3352.png",
+      "content": "일라이자 효과는 인간의 사고 과정과 감정을 어쩌고저쩌고 엄청길게일라이자 효과는 인간의 사고 과정과 감정을 어쩌고 저쩌고일라이자 효과는 인간의 사고 과정과 감정을 어쩌고저쩌고 엄청길게일라이자 효과는 인간의 사고 과정과 감정을 어쩌고 저쩌고",
+      "created_at": "2023-08-16",
+      "isUser": true
+    },
+    {
+      "id": 2,
+      "nickname": "냐하",
+      "profile_image": "https://hamtopia.com/web/product/tiny/202306/4990d9e0c64dcf0342ee120905977429.jpg",
+      "content": "배고파",
+      "created_at": "2023-08-16",
+      "isUser": false
+    },
+    {
+      "id": 3,
+      "nickname": "ㅇ ㅅ ㅇ",
+      "profile_image": "https://img.jakpost.net/c/2020/08/26/2020_08_26_103148_1598423727._large.jpg",
+      "content": "졸려",
+      "created_at": "2023-08-16",
+      "isUser": false
+    },
+    {
+      "id": 4,
+      "nickname": ">_<",
+      "profile_image": "https://img.freepik.com/premium-photo/fluffy-dwarf-hamster-lies-front-view_109543-618.jpg",
+      "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+      "created_at": "2023-08-16",
+      "isUser": true
+    },
+    {
+      "id": 5,
+      "nickname": "wecode",
+      "profile_image": "https://img.famtimes.co.kr/resources/2018/05/22/7J6ugOP2q6T7Z9Xy.jpg",
+      "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+      "created_at": "2023-08-16",
+      "isUser": false
+    },
+    {
+      "id": 6,
+      "nickname": "wecode",
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Xyj1ftWWW5ZjpyALJbMJ-mZwZLGAj_JLsTVAL2MKF7ULNCj7KGR5V6f4uJP8Msr7H3s&usqp=CAU",
+      "content": "일라이자 효과는 인간의 사고 과정과 감정을....",
+      "created_at": "2023-08-16",
+      "isUser": false
+    }
+  ]
+}

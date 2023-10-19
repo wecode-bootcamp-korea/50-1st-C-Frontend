@@ -21,7 +21,7 @@ const Login = () => {
   };
 
   const handleLogin = (body) => {
-    fetch('http://localhost:8000/user/signup', {
+    fetch('http://10.58.52.215:8000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -31,14 +31,15 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message === 'LOGIN SUCCESS') {
-          console.log('success :', data);
+          alert('로그인 성공!');
           navigate('/main');
-          localStorage.setItem('token', data.accessToken);
+          localStorage.setItem('jwtToken', data.jwtToken);
+          localStorage.setItem('userName', data.userName);
+          localStorage.setItem('profileImage', data.profileImage);
         } else {
-          console.log('failed :', data);
+          alert('로그인 실패!');
         }
-      })
-      .catch((err) => console.log(err));
+      });
   };
 
   const handleSubmit = (e) => {

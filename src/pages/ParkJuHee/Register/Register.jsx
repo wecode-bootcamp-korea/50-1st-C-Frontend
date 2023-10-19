@@ -22,17 +22,17 @@ const Register = () => {
     setInputValue((prevState) => ({
       ...prevState,
       [name]: value,
-      // isValid: !isValidEmail(value),
+      isValid: !isValidEmail(value),
     }));
   };
 
-  // const isValidEmail = (email) => {
-  //   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  //   return emailPattern.test(email);
-  // };
+  const isValidEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+  };
 
   const handleRegister = (body) => {
-    fetch('http://localhost:8000/user/signup', {
+    fetch('http://10.58.52.215:8000/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -42,13 +42,11 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message === 'SIGNUP SUCCESS') {
-          console.log('success :', data);
-          navigate('/RegisterSuccess');
+          navigate('/registerSuccess');
         } else {
-          console.log('signup failed :', data);
+          alert('회원가입 실패!');
         }
-      })
-      .catch((err) => console.log(err));
+      });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -201,7 +199,9 @@ const Register = () => {
               <button
                 type="submit"
                 className="btn"
-                disabled={password.length < 5 || passwordConfirm.length < 5}
+                disabled={
+                  !isValid || password.length < 5 || passwordConfirm.length < 5
+                }
               >
                 회원 가입
               </button>
