@@ -1,0 +1,85 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.register {
+  width: 512px;
+
+  input,
+  select {
+    padding: 0 16px;
+    margin: 10px 0;
+  }
+
+  option {
+    background-color: $theme-white;
+  }
+
+  .label {
+    display: inline;
+  }
+
+  .label-options {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: $theme-gray-strong;
+      margin: 0;
+      font-size: 12px;
+    }
+    .label {
+      color: $theme-black;
+      font-size: 16px;
+    }
+    .required {
+      color: $theme-red;
+    }
+  }
+  .page-title-info {
+    display: inline-block;
+    padding: 6px 0;
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+    }
+  }
+
+  .email-info {
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .phone-number-info {
+    .phone-front {
+      width: 170px;
+      display: inline-block;
+      margin-right: 8px;
+      z-index: 1;
+    }
+    .phone-number {
+      display: flex;
+      justify-content: space-between;
+      input {
+        display: inline-block;
+      }
+    }
+  }
+  .birthday-info {
+    .birthday-select {
+      height: 86px;
+      .birth-date {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .submit-container {
+    padding-bottom: 40px;
+  }
+
+  [class$='-info'] {
+    margin-bottom: 24px;
+  }
+}

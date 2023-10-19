@@ -1,0 +1,61 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.optionBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 6px;
+  &:last-child {
+    margin-right: 0;
+  }
+  .select {
+    position: absolute;
+    background-color: $theme-white;
+    width: 100%;
+    border: 1px solid $theme-gray-light;
+    display: block;
+    border-radius: 6px;
+    &:focus {
+      border: 1px solid $theme-black;
+    }
+    .selected {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+    }
+    .selected-value {
+      color: $theme-black;
+    }
+    .arrow {
+      position: relative;
+      font-size: 20px;
+      padding-left: 10px;
+      text-decoration: none;
+      color: $theme-gray-light;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 2.5px;
+        border-top: 1px solid $theme-gray-strong;
+        border-left: 1px solid $theme-gray-strong;
+        transform: rotate(-135deg);
+      }
+    }
+    ul {
+      max-height: 144px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .option {
+        display: block;
+        font-size: 16px;
+        color: $theme-gray-strong;
+        padding: 16px;
+      }
+    }
+  }
+}

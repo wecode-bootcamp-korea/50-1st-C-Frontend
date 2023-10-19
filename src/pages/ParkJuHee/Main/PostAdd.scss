@@ -1,0 +1,48 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.postAdd {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  .write-container {
+    display: flex;
+    margin-bottom: 32px;
+    .profile-thumb {
+      margin-right: 24px;
+    }
+    .user-container {
+      display: flex;
+      flex-direction: column;
+      .nickname {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .content {
+        width: 456px;
+        height: 70vh;
+        border: 1px solid $theme-gray-normal;
+        border-radius: 6px;
+        resize: none;
+        padding: 15px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .post-action {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid $theme-gray-normal;
+    [class^='btn'] {
+      display: block;
+      width: 120px;
+      padding: 20px;
+      height: 56px;
+      text-align: center;
+    }
+  }
+}

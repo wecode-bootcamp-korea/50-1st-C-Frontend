@@ -1,0 +1,49 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.RegisterSuccess {
+  .success-container {
+    .container {
+      @include flexCenter;
+      width: 576px;
+      height: 75vh;
+      flex-direction: column;
+      .check-icon {
+        width: 136px;
+        height: 136px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        margin-bottom: 40px;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 40px;
+          top: 37px;
+          left: 56px;
+          border-top: 2px solid $theme-black;
+          border-left: 2px solid $theme-black;
+          transform: rotate(-135deg);
+        }
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 800;
+      }
+      .subtitle {
+        margin-top: 12px;
+        font-size: 20px;
+        color: $theme-gray-strong;
+      }
+    }
+  }
+  .btn-container {
+    margin: 24px;
+    .btn {
+      display: block;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}

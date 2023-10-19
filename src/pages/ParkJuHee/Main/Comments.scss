@@ -1,0 +1,46 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.comments {
+  width: 512px;
+  .comment-list {
+    .writer-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 24px 0;
+      padding: 0 8px;
+      .user-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile-thumb {
+          width: 32px;
+          height: 32px;
+        }
+        .content-container {
+          margin-left: 24px;
+          position: relative;
+          top: 3px;
+          .nickname {
+            font-weight: 700;
+          }
+          .content {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-top: 5px;
+          }
+        }
+      }
+      .edit-container {
+        display: flex;
+        * {
+          margin: 0 5px;
+        }
+        .created-time {
+          color: $theme-gray-strong;
+        }
+      }
+    }
+  }
+}

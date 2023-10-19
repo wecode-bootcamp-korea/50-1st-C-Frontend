@@ -1,14 +1,35 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import KimCodeLogin from './pages/KimCode/Login/Login';
-import KimCodeMain from './pages/KimCode/Main/Main';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import Login from './pages/ParkJuHee/Login/Login';
+import Main from './pages/ParkJuHee/Main/Main';
+import Register from './pages/ParkJuHee/Register/Register';
+import Nav from './components/Nav/Nav';
+import RegisterSuccess from './pages/ParkJuHee/Register/RegisterSuccess';
+import PostAdd from './pages/ParkJuHee/Main/PostAdd';
+import PostEdit from './pages/ParkJuHee/Main/PostEdit';
+import PostView from './pages/ParkJuHee/Main/PostView';
+import Comments from './pages/ParkJuHee/Main/Comments';
 
 const Router = () => {
+  const NavLayout = () => (
+    <>
+      <Nav />
+      <Outlet />
+    </>
+  );
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/kimcode-login" element={<KimCodeLogin />} />
-        <Route path="/kimcode-main" element={<KimCodeMain />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/post" element={<Main />} />
+        <Route path="/post/add" element={<PostAdd />} />
+        <Route path="/post/edit/:postid" element={<PostEdit />} />
+        <Route path="/post/view/:postid" element={<PostView />} />
+        <Route element={<NavLayout />}>
+          <Route path="/register" element={<Register />} />
+          <Route path="/register-success" element={<RegisterSuccess />} />
+          <Route path="/comment" element={<Comments />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

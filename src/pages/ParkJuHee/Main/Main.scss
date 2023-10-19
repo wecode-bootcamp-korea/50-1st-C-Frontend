@@ -1,0 +1,39 @@
+@import 'src/styles/mixin.scss';
+
+.main {
+  @include flexCenter;
+  height: 80vh;
+  margin-top: 40px;
+  .post-list {
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .post-container {
+      margin: 0 24px;
+      height: 100%;
+      .post {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20%;
+    .write-container {
+      .write-btn {
+        text-align: center;
+        .btn {
+          display: block;
+          padding: 20px;
+          width: 120px;
+          height: 56px;
+        }
+      }
+    }
+  }
+}
