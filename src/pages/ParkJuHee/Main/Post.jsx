@@ -1,6 +1,6 @@
 import React from 'react';
-import './Post.scss';
 import { Link } from 'react-router-dom';
+import './Post.scss';
 
 const Post = ({
   nickname,
@@ -15,7 +15,7 @@ const Post = ({
     alert('삭제되었습니다');
   };
   return (
-    <div className="Post">
+    <div className="post">
       <div className="post-list">
         <div className="writer-desktop">
           <div className="user-container">
@@ -37,7 +37,7 @@ const Post = ({
           </div>
         </div>
         <div className="content-container">
-          <Link to={`/post/edit/${postId}`} className="content-area">
+          <Link to={`/post/view/${postId}`} className="content-area">
             <p className="content">{content}</p>
           </Link>
         </div>

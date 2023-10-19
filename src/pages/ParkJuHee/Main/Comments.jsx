@@ -3,7 +3,7 @@ import './Comments.scss';
 
 const Comments = () => {
   return (
-    <div className="Comments">
+    <div className="comments">
       <div className="comment-list">
         <div className="writer-desktop">
           <div className="user-container">

@@ -37,7 +37,7 @@ const PostAdd = () => {
   };
 
   return (
-    <div className="Write">
+    <div className="postAdd">
       <div className="write-container">
         <img className="profile-thumb" src={profileImage} alt="프로필" />
 

@@ -28,7 +28,7 @@ const Main = () => {
   }
 
   return (
-    <div className="Main">
+    <div className="main">
       <div className="post-list">
         <div className="post-container">
           <div className="post">

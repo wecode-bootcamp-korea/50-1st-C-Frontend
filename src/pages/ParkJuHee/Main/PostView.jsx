@@ -26,7 +26,7 @@ const PostView = () => {
   }, [threadId]);
 
   return (
-    <div className="PostView">
+    <div className="postView">
       <div className="post-container">
         <Post
           key={postView.id}

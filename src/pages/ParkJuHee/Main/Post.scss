@@ -1,0 +1,54 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.post {
+  width: 512px;
+  .post-list {
+    padding: 24px 8px;
+    border-bottom: 1px solid $theme-gray-light;
+    .writer-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .user-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nickname {
+          margin-left: 16px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      .edit-container {
+        display: flex;
+        * {
+          margin-left: 16px;
+        }
+        .created-time {
+          color: $theme-gray-strong;
+        }
+        .post-delete {
+          color: $theme-red;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .content-container {
+    margin: 16px 0;
+    max-height: 112px;
+    .content {
+      font-size: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .reply-area {
+    .reply-count {
+      color: $theme-gray-strong;
+    }
+  }
+}

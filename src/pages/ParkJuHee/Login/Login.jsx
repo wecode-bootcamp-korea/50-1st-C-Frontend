@@ -9,8 +9,9 @@ const Login = () => {
   const [isValid, setIsValid] = useState(false);
 
   const handleEmail = (e) => {
-    setEmail(e.target.value);
-    setIsValid(isValidEmail(e.target.value));
+    const { value } = e.target;
+    setEmail(value);
+    setIsValid(isValidEmail(value));
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
@@ -45,8 +46,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let body = {
-      email: email,
-      password: password,
+      email,
+      password,
     };
     handleLogin(body);
   };

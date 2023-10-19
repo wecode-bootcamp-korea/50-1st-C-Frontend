@@ -42,7 +42,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message === 'SIGNUP SUCCESS') {
-          navigate('/registerSuccess');
+          navigate('/register-success');
         } else {
           alert('회원가입 실패!');
         }

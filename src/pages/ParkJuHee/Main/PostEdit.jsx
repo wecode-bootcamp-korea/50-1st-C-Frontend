@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './PostAdd.scss';
+import './PostEdit.scss';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const PostEdit = () => {
@@ -54,7 +54,7 @@ const PostEdit = () => {
   };
 
   return (
-    <div className="Write">
+    <div className="postEdit">
       <div className="write-container">
         <img className="profile-thumb" src={profileImage} alt="프로필" />
 

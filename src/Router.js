@@ -27,7 +27,7 @@ const Router = () => {
         <Route path="/post/view/:postid" element={<PostView />} />
         <Route element={<NavLayout />}>
           <Route path="/register" element={<Register />} />
-          <Route path="/registersuccess" element={<RegisterSuccess />} />
+          <Route path="/register-success" element={<RegisterSuccess />} />
           <Route path="/comment" element={<Comments />} />
         </Route>
       </Routes>
