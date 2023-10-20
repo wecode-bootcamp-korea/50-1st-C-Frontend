@@ -1,0 +1,81 @@
+.compliete {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .headerFrame {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-bottom: 150px;
+    .backButtonIcon {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: -3px;
+      left: -180px;
+    }
+    .buttonBack {
+      border: none;
+      background: none;
+      font-size: 17px;
+      padding-left: 25px;
+      position: relative;
+      top: -7px;
+      left: -195px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .complieteIconFrame {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    .complieteIcon {
+      width: 136px;
+      height: 136px;
+    }
+  }
+  .complieteTextFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 230px;
+    .complieteText {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    .loginText {
+      font-size: 15px;
+      margin-top: 15px;
+      color: #999999;
+    }
+  }
+
+  .checkButtonFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .checkButton {
+      width: 450px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2d71f7;
+      font-weight: bolder;
+      font-size: 16px;
+      color: white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
