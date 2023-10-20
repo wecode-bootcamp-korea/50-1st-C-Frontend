@@ -8,6 +8,7 @@ $optional_color: #999999;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .page_frame {
     display: flex;
     flex-direction: row;
@@ -39,5 +40,9 @@ $optional_color: #999999;
     justify-content: center;
     align-items: center;
     margin-top: 12px;
+    .page_text {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

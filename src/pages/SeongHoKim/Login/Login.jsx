@@ -14,18 +14,20 @@ const Login = () => {
   const [id, setID] = useState('');
   const saveUserID = event => {
     setID(event.target.value);
+    console.log(id);
   };
 
   // input 입력(pw)
   const [pw, setPW] = useState('');
   const saveUserPW = event => {
     setPW(event.target.value);
+    console.log(pw);
   };
   // ID, PW 조건 : 아이디는 @와 .이 포함되고 비밀번호는 10글자 이상일때
   const isInvalid = id.includes('@', '.') && pw.length >= 10;
   // 로그인 버튼 클릭
   const goToMain = () => {
-    fetch('http://10.58.52.212:8000/login', {
+    fetch('http://10.58.52.215:8000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -37,13 +39,14 @@ const Login = () => {
     })
       .then(response => response.json())
       .then(data => {
-        if (data.message === 'LOGIN_SUCCESS') {
-          alert('입력값을 확인해 주세요.');
-        } else {
+        if (data.message === 'LOGIN SUCCESS') {
           alert('로그인 되었습니다.');
           localStorage.setItem('token', data.message);
           moveNavigate('/main');
+        } else if (data.message === 'INVALID EMAIL OR PASSWORD') {
+          alert('가입되지 않은 정보입니다.');
         }
+        console.log(data);
       });
   };
 
