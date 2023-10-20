@@ -2,7 +2,7 @@ import React from 'react';
 import './Signup_Compliete.scss';
 import backButton from './Back_button_icon.png';
 import compliete_icon from './checkIcon.png';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Signup_Compliete = () => {
   const moveLogin = useNavigate();
@@ -17,21 +17,21 @@ const Signup_Compliete = () => {
 
   return (
     <div className="compliete">
-      <div className="header_frame">
-        <img className="backButton_icon" src={backButton}></img>
-        <button className="button_back" onClick={goToSignUp}>
+      <div className="headerFrame">
+        <img className="backButtonIcon" src={backButton}></img>
+        <button className="buttonBack" onClick={goToSignUp}>
           뒤로
         </button>
       </div>
-      <div className="compliete_icon_frame">
-        <img className="compliete_icon" src={compliete_icon}></img>
+      <div className="complieteIconFrame">
+        <img className="complieteIcon" src={compliete_icon}></img>
       </div>
-      <div className="compliete_text_frame">
-        <p className="compliete_text">회원 가입되었습니다!</p>
-        <p className="login_text">이제 로그인해주세요.</p>
+      <div className="complieteTextFrame">
+        <p className="complieteText">회원 가입되었습니다!</p>
+        <p className="loginText">이제 로그인해주세요.</p>
       </div>
-      <div className="check_button_frame">
-        <button className="check_button" onClick={goToLogin}>
+      <div className="checkButtonFrame">
+        <button className="checkButton" onClick={goToLogin}>
           확인
         </button>
       </div>

@@ -51,12 +51,12 @@ const Login = () => {
   };
 
   return (
-    <div className="login_page">
-      <div className="logo_frame">
-        <img className="big_logo" src={logo1} alt="위코드 로고1"></img>
-        <img className="small_logo" src={logo2} alt="위코드 로고2"></img>
+    <div className="loginPage">
+      <div className="logoFrame">
+        <img className="bigLogo" src={logo1} alt="위코드 로고1" />
+        <img className="smallLogo" src={logo2} alt="위코드 로고2" />
       </div>
-      <div className="input_login_frame">
+      <div className="inputLoginFrame">
         <input
           className="email"
           type="text"
@@ -69,21 +69,21 @@ const Login = () => {
           placeholder="비밀번호"
           onChange={saveUserPW}
         ></input>
-        <div className="login_button_frame">
+        <div className="loginButtonFrame">
           <button
-            className={isInvalid ? 'login_button' : 'disable_login_button'}
+            className={isInvalid ? 'loginButton' : 'disableLoginButton'}
             disabled={isInvalid ? false : true}
             onClick={goToMain}
           >
             로그인
           </button>
         </div>
-        <div className="side_button_frame">
-          <button className="signup_button" onClick={goToSignUp}>
+        <div className="sideButtonFrame">
+          <button className="signupButton" onClick={goToSignUp}>
             회원 가입
           </button>
           <div className="wall">|</div>
-          <button className="password_button">비밀번호 찾기</button>
+          <button className="passwordButton">비밀번호 찾기</button>
         </div>
       </div>
     </div>

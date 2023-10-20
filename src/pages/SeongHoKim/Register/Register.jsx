@@ -73,48 +73,46 @@ const Register = () => {
       });
   };
 
-  console.log(BIRTHDAY_YEAR_LIST);
-
   return (
-    <div className="register_page">
-      <div className="header_frame">
-        <img className="button_icon" src={backButton}></img>
-        <button className="back_button" onClick={goToLogin}>
+    <div className="registerPage">
+      <div className="headerFrame">
+        <img className="buttonIcon" src={backButton}></img>
+        <button className="backButton" onClick={goToLogin}>
           뒤로
         </button>
-        <p className="signup_main_text">회원가입</p>
+        <p className="signupMainText">회원가입</p>
       </div>
-      <div className="info_input_frame">
-        <div className="text_info_frame">
+      <div className="infoInputFrame">
+        <div className="textInfoFrame">
           <p className="info">기본 정보</p>
-          <p className="Required">필수 사항</p>
+          <p className="required">필수 사항</p>
         </div>
         <input
-          className="email_input"
+          className="emailInput"
           type="text"
           placeholder="이메일"
           value={email}
           onChange={saveUserEmail}
         ></input>
         <input
-          className="password_input"
+          className="passwordInput"
           type="password"
           placeholder="비밀번호"
           value={email_pw}
           onChange={saveUserPassword}
         ></input>
         <input
-          className="re_password_input"
+          className="rePasswordInput"
           type="password"
           placeholder="비밀번호 확인"
           value={email_re_pw}
           onChange={saveUserRePassword}
         ></input>
       </div>
-      <div className="nickname_info_frame">
-        <div className="text_nickname_frame">
-          <p className="nickname_info_text">닉네임</p>
-          <p className="optional_info_text">선택 사항</p>
+      <div className="nicknameInfoFrame">
+        <div className="textNicknameFrame">
+          <p className="nicknameInfoText">닉네임</p>
+          <p className="optionalInfoText">선택 사항</p>
         </div>
         <input
           className="nickname"
@@ -125,12 +123,12 @@ const Register = () => {
         ></input>
       </div>
 
-      <div className="phone_number_frame">
-        <p className="phone_text">전화번호</p>
-        <p className="optional_info_text">선택 사항</p>
+      <div className="phoneNumberFrame">
+        <p className="phoneText">전화번호</p>
+        <p className="optionalInfoText">선택 사항</p>
       </div>
-      <div className="phonenumber_select_frame">
-        <select className="phonenumber_select">
+      <div className="phonenumberSelectFrame">
+        <select className="phonenumberSelect">
           {PHONE_NUMBER_LIST.map((phonenumber, index) => (
             <option key={index}>{phonenumber}</option>
           ))}
@@ -143,11 +141,11 @@ const Register = () => {
           onChange={saveUserPhoneNumber}
         />
       </div>
-      <div className="birthday_frame">
-        <p className="birthday_text">생일</p>
-        <p className="selected_text03">선택 사항</p>
+      <div className="birthdayFrame">
+        <p className="birthdayText">생일</p>
+        <p className="selectedText03">선택 사항</p>
       </div>
-      <div className="birthday_select_frame">
+      <div className="birthdaySelectFrame">
         <select className="year">
           {BIRTHDAY_YEAR_LIST.map((year, index) => (
             <option key={index}>{year}</option>
@@ -164,9 +162,9 @@ const Register = () => {
           ))}
         </select>
       </div>
-      <div className="signup_button_frame">
+      <div className="signupButtonFrame">
         <button
-          className={isInvalid ? 'signup_button' : 'disabled_signup_button'}
+          className={isInvalid ? 'signupButton' : 'disabledSignupButton'}
           disabled={isInvalid ? false : true}
           onClick={goToSignup}
         >
@@ -181,8 +179,8 @@ export default Register;
 
 const PHONE_NUMBER_LIST = ['010', '016', '017', '018', '019'];
 const BIRTHDAY_YEAR_LIST = Array.from(
-  { length: 12 },
+  { length: 11 },
   (_, i) => `${i + 1990}년`,
 );
 const BIRTHDAY_MONTH_LIST = Array.from({ length: 12 }, (_, i) => `${i + 1}월`);
-const BIRTHDAY_DAY_LIST = Array.from({ length: 30 }, (_, i) => `${i + 1}일`);
+const BIRTHDAY_DAY_LIST = Array.from({ length: 31 }, (_, i) => `${i + 1}일`);

@@ -6,19 +6,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .header_frame {
+  .headerFrame {
     display: flex;
     justify-content: space-evenly;
 
     margin-bottom: 150px;
-    .backButton_icon {
+    .backButtonIcon {
       width: 15px;
       height: 15px;
       position: relative;
       top: -3px;
       left: -180px;
     }
-    .button_back {
+    .buttonBack {
       border: none;
       background: none;
       font-size: 17px;
@@ -32,39 +32,39 @@
       }
     }
   }
-  .compliete_icon_frame {
+  .complieteIconFrame {
     display: flex;
     justify-content: center;
 
     margin-bottom: 50px;
-    .compliete_icon {
+    .complieteIcon {
       width: 136px;
       height: 136px;
     }
   }
-  .compliete_text_frame {
+  .complieteTextFrame {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 230px;
-    .compliete_text {
+    .complieteText {
       font-size: 20px;
       font-weight: bolder;
     }
-    .login_text {
+    .loginText {
       font-size: 15px;
       margin-top: 15px;
       color: #999999;
     }
   }
 
-  .check_button_frame {
+  .checkButtonFrame {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .check_button {
+    .checkButton {
       width: 450px;
       padding: 15px;
       border: none;
