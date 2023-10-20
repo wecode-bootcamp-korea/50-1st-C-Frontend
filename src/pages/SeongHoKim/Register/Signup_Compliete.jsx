@@ -18,13 +18,13 @@ const Signup_Compliete = () => {
   return (
     <div className="compliete">
       <div className="headerFrame">
-        <img className="backButtonIcon" src={backButton}></img>
+        <img className="backButtonIcon" src={backButton} />
         <button className="buttonBack" onClick={goToSignUp}>
           뒤로
         </button>
       </div>
       <div className="complieteIconFrame">
-        <img className="complieteIcon" src={compliete_icon}></img>
+        <img className="complieteIcon" src={compliete_icon} />
       </div>
       <div className="complieteTextFrame">
         <p className="complieteText">회원 가입되었습니다!</p>

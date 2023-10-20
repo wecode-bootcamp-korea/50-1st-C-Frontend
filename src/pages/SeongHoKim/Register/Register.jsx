@@ -76,7 +76,7 @@ const Register = () => {
   return (
     <div className="registerPage">
       <div className="headerFrame">
-        <img className="buttonIcon" src={backButton}></img>
+        <img className="buttonIcon" src={backButton} />
         <button className="backButton" onClick={goToLogin}>
           뒤로
         </button>

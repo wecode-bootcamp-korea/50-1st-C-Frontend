@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="page_frame">
-        <img className="profile01" src={profile01} alt="프로필 사진1"></img>
+        <img className="profile01" src={profile01} alt="프로필 사진1" />
         <p className="name_text">Name</p>
         <p className="time_text">00.00.00</p>
       </div>
