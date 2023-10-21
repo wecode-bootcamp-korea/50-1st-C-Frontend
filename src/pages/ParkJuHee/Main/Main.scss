@@ -4,7 +4,7 @@
   @include flexCenter;
   height: 80vh;
   margin-top: 40px;
-  .post-list {
+  .postList {
     height: 100%;
     overflow: auto;
     -ms-overflow-style: none;
@@ -12,7 +12,7 @@
       display: none;
     }
 
-    .post-container {
+    .postContainer {
       margin: 0 24px;
       height: 100%;
       .post {
@@ -24,8 +24,8 @@
     position: fixed;
     bottom: 20px;
     right: 20%;
-    .write-container {
-      .write-btn {
+    .writeContainer {
+      .writeBtn {
         text-align: center;
         .btn {
           display: block;

@@ -5,13 +5,13 @@
   display: flex;
   flex-direction: column;
   margin: 40px 0;
-  .write-container {
+  .writeContainer {
     display: flex;
     margin-bottom: 32px;
-    .profile-thumb {
+    .profileThumb {
       margin-right: 24px;
     }
-    .user-container {
+    .userContainer {
       display: flex;
       flex-direction: column;
       .nickname {
@@ -32,7 +32,7 @@
       }
     }
   }
-  .post-action {
+  .postAction {
     display: flex;
     justify-content: space-between;
     padding-top: 24px;

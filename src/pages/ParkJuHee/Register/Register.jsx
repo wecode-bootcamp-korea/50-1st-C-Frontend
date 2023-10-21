@@ -81,13 +81,13 @@ const Register = () => {
   return (
     <div className="register">
       <div className="container">
-        <div className="main-form-container">
-          <form className="register-form" onSubmit={handleSubmit}>
-            <div className="page-title-info">
+        <div className="mainFormContainer">
+          <form className="registerForm" onSubmit={handleSubmit}>
+            <div className="pageTitleInfo">
               <h1>회원가입</h1>
             </div>
-            <div className="email-info">
-              <div className="label-options">
+            <div className="emailInfo">
+              <div className="labelOptions">
                 <label htmlFor="userEmail">기본정보</label>
                 <p className="required">필수사항</p>
               </div>
@@ -124,8 +124,8 @@ const Register = () => {
               />
             </div>
 
-            <div className="name-info">
-              <div className="label-options">
+            <div className="nameInfo">
+              <div className="labelOptions">
                 <label htmlFor="name">닉네임과 프로필 이미지</label>
                 <p className="required">필수사항</p>
               </div>
@@ -141,13 +141,13 @@ const Register = () => {
               />
             </div>
 
-            <div className="phone-number-info">
-              <div className="label-options">
+            <div className="phoneNumberInfo">
+              <div className="labelOptions">
                 <label htmlFor="phoneNumber">전화번호</label>
                 <p>선택사항</p>
               </div>
-              <div className="phone-number">
-                <div className="phone-front">
+              <div className="phoneNumber">
+                <div className="phoneFront">
                   <OptionBox
                     date="PHONEFRONT"
                     phoneFront={phoneFront}
@@ -166,13 +166,13 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="birthday-info">
-              <div className="label-options">
+            <div className="birthdayInfo">
+              <div className="labelOptions">
                 <p className="label">생일</p>
                 <p>선택사항</p>
               </div>
-              <div className="birthday-select">
-                <div className="birth-date">
+              <div className="birthdaySelect">
+                <div className="birthDate">
                   <OptionBox
                     date="YEAR"
                     birthYear={birthYear}
@@ -195,7 +195,7 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="submit-container">
+            <div className="submitContainer">
               <button
                 type="submit"
                 className="btn"

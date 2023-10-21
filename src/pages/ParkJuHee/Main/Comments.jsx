@@ -1,20 +1,20 @@
 import React from 'react';
 import './Comments.scss';
 
-const Comments = () => {
+const Comments = ({ key, nickname, comment, createdAt, profileImage }) => {
   return (
     <div className="comments">
-      <div className="comment-list">
-        <div className="writer-desktop">
-          <div className="user-container">
-            <img className="profile-thumb" src="" alt="프로필" />
-            <div className="content-container">
-              <p className="nickname">nickname</p>
-              <p className="content">content</p>
+      <div className="commentList">
+        <div className="writerDesktop">
+          <div className="userContainer">
+            <img className="profileThumb" src={profileImage} alt="프로필" />
+            <div className="contentContainer">
+              <p className="nickname">{nickname}</p>
+              <p className="comment">{comment}</p>
             </div>
           </div>
-          <div className="edit-container">
-            <p className="created-time">created_at</p>
+          <div className="editContainer">
+            <p className="createdTime">{createdAt}</p>
           </div>
         </div>
       </div>

@@ -2,7 +2,20 @@
 @import 'src/styles/mixin.scss';
 
 .postView {
-  .post-container {
-    border-bottom: 1px solid $theme-gray-normal;
+  .container {
+    width: 512px;
+    height: 60vh;
+    .postContainer {
+      width: 100%;
+      border-bottom: 1px solid $theme-gray-normal;
+    }
+    .commentContainer {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }

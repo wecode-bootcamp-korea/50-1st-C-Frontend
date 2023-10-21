@@ -18,7 +18,7 @@
     display: inline;
   }
 
-  .label-options {
+  .labelOptions {
     display: flex;
     justify-content: space-between;
     p {
@@ -34,7 +34,7 @@
       color: $theme-red;
     }
   }
-  .page-title-info {
+  .pageTitleInfo {
     display: inline-block;
     padding: 6px 0;
     h1 {
@@ -43,21 +43,21 @@
     }
   }
 
-  .email-info {
+  .emailInfo {
     input {
       display: block;
       width: 100%;
     }
   }
 
-  .phone-number-info {
-    .phone-front {
+  .phoneNumberInfo {
+    .phoneFront {
       width: 170px;
       display: inline-block;
       margin-right: 8px;
       z-index: 1;
     }
-    .phone-number {
+    .phoneNumber {
       display: flex;
       justify-content: space-between;
       input {
@@ -65,21 +65,21 @@
       }
     }
   }
-  .birthday-info {
-    .birthday-select {
+  .birthdayInfo {
+    .birthdaySelect {
       height: 86px;
-      .birth-date {
+      .birthDate {
         display: flex;
         justify-content: space-between;
       }
     }
   }
 
-  .submit-container {
+  .submitContainer {
     padding-bottom: 40px;
   }
 
-  [class$='-info'] {
+  [class$='Info'] {
     margin-bottom: 24px;
   }
 }

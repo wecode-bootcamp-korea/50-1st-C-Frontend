@@ -16,33 +16,33 @@ const Post = ({
   };
   return (
     <div className="post">
-      <div className="post-list">
-        <div className="writer-desktop">
-          <div className="user-container">
-            <img className="profile-thumb" src={profileImage} alt="프로필" />
+      <div className="postList">
+        <div className="writerDesktop">
+          <div className="userContainer">
+            <img className="profileThumb" src={profileImage} alt="프로필" />
             <p className="nickname">{nickname}</p>
           </div>
-          <div className="edit-container">
-            <p className="created-time">{created_at}</p>
+          <div className="editContainer">
+            <p className="createdTime">{created_at}</p>
             {isUser ? (
               <>
-                <Link to={`/post/edit/${postId}`} className="post-edit">
+                <Link to={`/post-edit/${postId}`} className="post-edit">
                   수정
                 </Link>
-                <p className="post-delete" onClick={deletePost}>
+                <p className="postDelete" onClick={deletePost}>
                   삭제
                 </p>
               </>
             ) : null}
           </div>
         </div>
-        <div className="content-container">
-          <Link to={`/post/view/${postId}`} className="content-area">
+        <div className="contentContainer">
+          <Link to={`/post-view/${postId}`} className="content-area">
             <p className="content">{content}</p>
           </Link>
         </div>
-        <div className="reply-area">
-          <p className="reply-count">댓글 00</p>
+        <div className="replyArea">
+          <p className="replyCount">댓글 00</p>
         </div>
       </div>
     </div>

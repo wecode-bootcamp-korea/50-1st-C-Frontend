@@ -21,8 +21,9 @@ const Login = () => {
     return emailPattern.test(email);
   };
 
+  // http://10.58.52.215:8000/login
   const handleLogin = (body) => {
-    fetch('http://10.58.52.215:8000/login', {
+    fetch('http://10.58.52.73:8000/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -55,14 +56,14 @@ const Login = () => {
   return (
     <div className="login">
       <div className="container">
-        <div className="logo-container">
+        <div className="logoContainer">
           <div>
             <img className="logo" src="/images/Logo.png" alt="logo" />
             <img src="/images/logo_wecode.png" alt="logo_wecode" />
           </div>
         </div>
-        <div className="form-container">
-          <form className="login-form" onSubmit={handleSubmit}>
+        <div className="formContainer">
+          <form className="loginForm" onSubmit={handleSubmit}>
             <label htmlFor="email" />
             <input
               type="email"
@@ -90,7 +91,7 @@ const Login = () => {
               로그인
             </button>
           </form>
-          <div className="login-options">
+          <div className="loginOptions">
             <ul>
               <li>
                 <Link to="/register" className="link">

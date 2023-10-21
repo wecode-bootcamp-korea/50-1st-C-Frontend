@@ -58,7 +58,7 @@ const OptionBox = ({
         onBlur={() => setIsToggled(false)}
       >
         <div className="selected">
-          <div className="selected-value">{selectValue()}</div>
+          <div className="selectedValue">{selectValue()}</div>
           <div className="arrow" />
         </div>
 

@@ -3,22 +3,22 @@
 
 .comments {
   width: 512px;
-  .comment-list {
-    .writer-desktop {
+  .commentList {
+    .writerDesktop {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 24px 0;
       padding: 0 8px;
-      .user-container {
+      .userContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .profile-thumb {
+        .profileThumb {
           width: 32px;
           height: 32px;
         }
-        .content-container {
+        .contentContainer {
           margin-left: 24px;
           position: relative;
           top: 3px;
@@ -32,12 +32,12 @@
           }
         }
       }
-      .edit-container {
+      .editContainer {
         display: flex;
         * {
           margin: 0 5px;
         }
-        .created-time {
+        .createdTime {
           color: $theme-gray-strong;
         }
       }

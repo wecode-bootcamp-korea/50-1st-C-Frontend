@@ -3,14 +3,14 @@
 
 .post {
   width: 512px;
-  .post-list {
+  .postList {
     padding: 24px 8px;
     border-bottom: 1px solid $theme-gray-light;
-    .writer-desktop {
+    .writerDesktop {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .user-container {
+      .userContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,15 +20,15 @@
           font-weight: 700;
         }
       }
-      .edit-container {
+      .editContainer {
         display: flex;
         * {
           margin-left: 16px;
         }
-        .created-time {
+        .createdTime {
           color: $theme-gray-strong;
         }
-        .post-delete {
+        .postDelete {
           color: $theme-red;
           &:hover {
             cursor: pointer;
@@ -37,7 +37,7 @@
       }
     }
   }
-  .content-container {
+  .contentContainer {
     margin: 16px 0;
     max-height: 112px;
     .content {
@@ -46,8 +46,8 @@
       overflow: hidden;
     }
   }
-  .reply-area {
-    .reply-count {
+  .replyArea {
+    .replyCount {
       color: $theme-gray-strong;
     }
   }

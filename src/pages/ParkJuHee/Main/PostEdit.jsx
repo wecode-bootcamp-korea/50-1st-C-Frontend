@@ -9,23 +9,6 @@ const PostEdit = () => {
   const profileImage = localStorage.getItem('profileImage');
   const [editContent, setEditContent] = useState('');
 
-  const threadId = useParams();
-  useEffect(() => {
-    fetch('http://10.58.52.215:8000/detailsView', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        id: threadId.postid,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setEditContent(data.message[0].content);
-      });
-  }, [threadId]);
-
   const handlePost = (body) => {
     fetch('http://10.58.52.215:8000/writePost', {
       method: 'PATCH',
@@ -55,10 +38,10 @@ const PostEdit = () => {
 
   return (
     <div className="postEdit">
-      <div className="write-container">
-        <img className="profile-thumb" src={profileImage} alt="프로필" />
+      <div className="writeContainer">
+        <img className="profileThumb" src={profileImage} alt="프로필" />
 
-        <div className="user-container">
+        <div className="userContainer">
           <p className="nickname">{userName}</p>
           <textarea
             className="content"
@@ -69,8 +52,8 @@ const PostEdit = () => {
           />
         </div>
       </div>
-      <div className="post-action">
-        <Link to="/post" className="btn-border">
+      <div className="postAction">
+        <Link to="/post" className="btnBorder">
           취소
         </Link>
         <button onClick={handleClick} className="btn">

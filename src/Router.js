@@ -8,7 +8,6 @@ import RegisterSuccess from './pages/ParkJuHee/Register/RegisterSuccess';
 import PostAdd from './pages/ParkJuHee/Main/PostAdd';
 import PostEdit from './pages/ParkJuHee/Main/PostEdit';
 import PostView from './pages/ParkJuHee/Main/PostView';
-import Comments from './pages/ParkJuHee/Main/Comments';
 
 const Router = () => {
   const NavLayout = () => (
@@ -22,13 +21,12 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/post" element={<Main />} />
-        <Route path="/post/add" element={<PostAdd />} />
-        <Route path="/post/edit/:postid" element={<PostEdit />} />
-        <Route path="/post/view/:postid" element={<PostView />} />
+        <Route path="/post-add" element={<PostAdd />} />
+        <Route path="/post-edit/:postid" element={<PostEdit />} />
         <Route element={<NavLayout />}>
           <Route path="/register" element={<Register />} />
           <Route path="/register-success" element={<RegisterSuccess />} />
-          <Route path="/comment" element={<Comments />} />
+          <Route path="/post-view/:postid" element={<PostView />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -29,8 +29,8 @@ const Main = () => {
 
   return (
     <div className="main">
-      <div className="post-list">
-        <div className="post-container">
+      <div className="postList">
+        <div className="postContainer">
           <div className="post">
             {postList.map((post) => (
               <Post
@@ -47,9 +47,9 @@ const Main = () => {
         </div>
       </div>
       <div className="footer">
-        <div className="write-container">
-          <div className="write-btn">
-            <Link to="/post/add" className="btn">
+        <div className="writeContainer">
+          <div className="writeBtn">
+            <Link to="/post-add" className="btn">
               글쓰기
             </Link>
           </div>

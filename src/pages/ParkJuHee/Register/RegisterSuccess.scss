@@ -2,13 +2,13 @@
 @import 'src/styles/mixin.scss';
 
 .RegisterSuccess {
-  .success-container {
+  .successContainer {
     .container {
       @include flexCenter;
       width: 576px;
       height: 75vh;
       flex-direction: column;
-      .check-icon {
+      .checkIcon {
         width: 136px;
         height: 136px;
         border: 2px solid #000;
@@ -38,7 +38,7 @@
       }
     }
   }
-  .btn-container {
+  .btnContainer {
     margin: 24px;
     .btn {
       display: block;

@@ -5,13 +5,13 @@ import './RegisterSuccess.scss';
 const RegisterSuccess = () => {
   return (
     <div className="RegisterSuccess">
-      <div className="success-container">
+      <div className="successContainer">
         <div className="container">
-          <div className="check-icon" />
+          <div className="checkIcon" />
           <p className="title">회원가입되었습니다!</p>
           <p className="subtitle">이제 로그인해주세요.</p>
         </div>
-        <div className="btn-container">
+        <div className="btnContainer">
           <Link to="/" className="btn">
             확인
           </Link>

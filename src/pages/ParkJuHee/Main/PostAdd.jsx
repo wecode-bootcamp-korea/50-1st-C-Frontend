@@ -38,10 +38,10 @@ const PostAdd = () => {
 
   return (
     <div className="postAdd">
-      <div className="write-container">
-        <img className="profile-thumb" src={profileImage} alt="프로필" />
+      <div className="writeContainer">
+        <img className="profileThumb" src={profileImage} alt="프로필" />
 
-        <div className="user-container">
+        <div className="userContainer">
           <p className="nickname">{userName}</p>
           <textarea
             className="content"
@@ -52,8 +52,8 @@ const PostAdd = () => {
           />
         </div>
       </div>
-      <div className="post-action">
-        <Link to="/post" className="btn-border">
+      <div className="postAction">
+        <Link to="/post" className="btnBorder">
           취소
         </Link>
         <button onClick={handleClick} className="btn">
