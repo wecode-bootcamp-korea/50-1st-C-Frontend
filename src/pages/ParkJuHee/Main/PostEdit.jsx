@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './PostEdit.scss';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { mainInstance } from '../../../utils/axios';
 
 const PostEdit = () => {
   const navigate = useNavigate();
-  const userToken = localStorage.getItem('jwtToken');
   const userName = localStorage.getItem('userName');
   const profileImage = localStorage.getItem('profileImage');
   const [editContent, setEditContent] = useState('');
+  const postId = useParams();
 
   const handlePost = (body) => {
-    fetch('http://10.58.52.215:8000/writePost', {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        authorization: userToken,
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message === 'EDITED SUCCESS') {
+    mainInstance
+      .patch('writePost', { header: { id: postId.postid }, body: body })
+      .then((res) => {
+        if (res.message === 'EDITED SUCCESS') {
           alert('글 수정 완료!');
           navigate('/post');
         } else {

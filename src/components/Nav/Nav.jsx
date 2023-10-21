@@ -10,9 +10,11 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <p onClick={back} className="back-nav">
-        뒤로
-      </p>
+      <div className="back-icon">
+        <p onClick={back} className="back-nav">
+          뒤로
+        </p>
+      </div>
     </div>
   );
 };

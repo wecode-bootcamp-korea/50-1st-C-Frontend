@@ -1,32 +1,23 @@
 import React, { useState } from 'react';
 import './PostAdd.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import { mainInstance } from '../../../utils/axios';
 
 const PostAdd = () => {
   const navigate = useNavigate();
   const [textValue, setTextValue] = useState('');
-  const userToken = localStorage.getItem('jwtToken');
   const userName = localStorage.getItem('userName');
   const profileImage = localStorage.getItem('profileImage');
 
   const handlePost = (body) => {
-    fetch('http://10.58.52.215:8000/writePost', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        authorization: userToken,
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message === 'UPLOAD SUCCESS') {
-          alert('글 등록 완료!');
-          navigate('/post');
-        } else {
-          alert('failed');
-        }
-      });
+    mainInstance.post('writePost', { body: body }).then((res) => {
+      if (res.message === 'UPLOAD SUCCESS') {
+        alert('글 등록 완료!');
+        navigate('/post');
+      } else {
+        alert('failed');
+      }
+    });
   };
 
   const handleClick = () => {

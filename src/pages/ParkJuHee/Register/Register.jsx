@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Register.scss';
 import OptionBox from './OptionBox';
 import { useNavigate } from 'react-router-dom';
+import { mainInstance } from '../../../utils/axios';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,21 +33,13 @@ const Register = () => {
   };
 
   const handleRegister = (body) => {
-    fetch('http://10.58.52.215:8000/user/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message === 'SIGNUP SUCCESS') {
-          navigate('/register-success');
-        } else {
-          alert('회원가입 실패!');
-        }
-      });
+    mainInstance.post('user/signup', { body: body }).then((res) => {
+      if (res.message === 'SIGNUP SUCCESS') {
+        navigate('/register-success');
+      } else {
+        alert('회원가입 실패!');
+      }
+    });
   };
   const handleSubmit = (e) => {
     e.preventDefault();

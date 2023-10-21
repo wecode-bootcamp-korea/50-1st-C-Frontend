@@ -4,25 +4,29 @@
 .nav {
   margin: 24px auto;
   padding: 8px;
-  &:hover {
-    cursor: pointer;
-  }
-  .back-nav {
-    position: relative;
-    font-size: 20px;
-    padding-left: 10px;
-    text-decoration: none;
-    color: $theme-black;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      top: 2px;
-      left: -10px;
-      border-top: 2px solid $theme-black;
-      border-left: 2px solid $theme-black;
-      transform: rotate(-45deg);
+  .back-icon {
+    width: 85px;
+    padding: 10px 20px;
+    &:hover {
+      cursor: pointer;
+    }
+    .back-nav {
+      position: relative;
+      font-size: 20px;
+      padding-left: 10px;
+      text-decoration: none;
+      color: $theme-black;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 2px;
+        left: -10px;
+        border-top: 2px solid $theme-black;
+        border-left: 2px solid $theme-black;
+        transform: rotate(-45deg);
+      }
     }
   }
 }

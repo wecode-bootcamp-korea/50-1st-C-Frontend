@@ -2,26 +2,22 @@ import React, { useEffect, useState } from 'react';
 import Post from './Post';
 import './Main.scss';
 import { Link } from 'react-router-dom';
+import testInstance, { mainInstance } from '../../../utils/axios';
 
 const Main = () => {
   const [postList, setPostList] = useState([]);
-  const userToken = localStorage.getItem('userToken');
 
-  // 백엔드 서버 http://10.58.52.215:8000/showPosts
-  // mock data /data/postData.json
+  // useEffect(() => {
+  //   mainInstance.post('showPosts').then((res) => {
+  //     setPostList(res.data.message);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    fetch('/data/postData.json', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        authorization: userToken,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setPostList(data.message);
-      });
-  }, [userToken]);
+    testInstance.get('postData.json').then((res) => {
+      setPostList(res.data.message);
+    });
+  }, []);
 
   if (postList.length <= 0) {
     return null;

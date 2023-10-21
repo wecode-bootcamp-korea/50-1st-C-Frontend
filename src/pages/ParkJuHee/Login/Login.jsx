@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import { mainInstance } from '../../../utils/axios';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,27 +22,18 @@ const Login = () => {
     return emailPattern.test(email);
   };
 
-  // http://10.58.52.215:8000/login
   const handleLogin = (body) => {
-    fetch('http://10.58.52.73:8000/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message === 'LOGIN SUCCESS') {
-          alert('로그인 성공!');
-          navigate('/main');
-          localStorage.setItem('jwtToken', data.jwtToken);
-          localStorage.setItem('userName', data.userName);
-          localStorage.setItem('profileImage', data.profileImage);
-        } else {
-          alert('로그인 실패!');
-        }
-      });
+    mainInstance.post('users', { body: body }).then((res) => {
+      if (res.message === 'LOGIN SUCCESS') {
+        alert('로그인 성공!');
+        navigate('/post');
+        localStorage.setItem('jwtToken', res.jwtToken);
+        localStorage.setItem('userName', res.userName);
+        localStorage.setItem('profileImage', res.profileImage);
+      } else {
+        alert('로그인 실패!');
+      }
+    });
   };
 
   const handleSubmit = (e) => {

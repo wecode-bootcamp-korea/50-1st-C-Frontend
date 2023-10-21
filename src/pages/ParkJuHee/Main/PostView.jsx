@@ -4,26 +4,24 @@ import { useParams } from 'react-router-dom';
 import Comments from './Comments';
 
 import './PostView.scss';
+import testInstance, { mainInstance } from '../../../utils/axios';
 
 const PostView = () => {
   const [postView, setPostView] = useState([]);
-  const threadId = useParams();
+  const postId = useParams();
 
-  // http://10.58.52.215:8000/detailsView
+  // useEffect(() => {
+  //   mainInstance
+  //     .post('detailsView', { body: { id: postId.postid } })
+  //     .then((res) => {
+  //       setPostView(res.data.message[0]);
+  //     });
+  // }, [postId]);
+
   useEffect(() => {
-    fetch(`/data/postList.json`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      // body: JSON.stringify({
-      //   id: threadId.postid,
-      // }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setPostView(data.message[0]);
-      });
+    testInstance.get('postList.json').then((res) => {
+      setPostView(res.data.message[0]);
+    });
   }, []);
 
   if (postView.length <= 0) {
