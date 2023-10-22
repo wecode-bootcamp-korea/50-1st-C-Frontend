@@ -1,0 +1,49 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+button,
+a[class^='btn'] {
+  width: 120px;
+  height: 56px;
+  margin: 16px 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 18px;
+  background-color: $theme-blue;
+  color: $theme-white;
+  &:hover,
+  &:active {
+    cursor: pointer;
+    background-color: $theme-navy;
+  }
+  &[disabled] {
+    background-color: $theme-gray-normal;
+    cursor: default;
+  }
+  &.btn-long {
+    width: 100%;
+  }
+  &.btn-line {
+    display: block;
+    margin: 16px 0;
+    width: 100%;
+    height: 56px;
+    color: $theme-blue;
+    border: 1px solid $theme-blue;
+    border-radius: 6px;
+    background-color: $theme-white;
+    font-weight: 800;
+    font-size: 18px;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      color: $theme-navy;
+      border: 1px solid $theme-navy;
+    }
+    &[disabled] {
+      background-color: $theme-gray-normal;
+      cursor: default;
+    }
+  }
+}

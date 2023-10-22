@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
 import './Main.scss';
+import '../../../components/Button.scss';
 import { Link } from 'react-router-dom';
 import testInstance, { mainInstance } from '../../../utils/axios';
 

@@ -1,0 +1,22 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.input {
+  width: 100%;
+  input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid $theme-gray-light;
+    border-radius: 6px;
+    font-size: 16px;
+    color: $theme-black;
+    padding: 19px 16px 15px 16px;
+    &:focus {
+      outline: none;
+      border: 1px solid $theme-black;
+    }
+    &::placeholder {
+      color: $theme-gray-strong;
+    }
+  }
+}

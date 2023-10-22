@@ -25,9 +25,6 @@
     padding: 0 24px 40px 24px;
 
     .loginForm {
-      input {
-        padding: 19px 16px 15px 16px;
-      }
       input[type='email'] {
         margin-bottom: 8px;
       }
@@ -45,10 +42,8 @@
         @include flexCenter;
       }
 
-      a,
-      .linkBtn {
+      a {
         font-size: 14px;
-        text-decoration: none;
         color: $theme-black;
         margin: 0 24px;
         width: 96px;

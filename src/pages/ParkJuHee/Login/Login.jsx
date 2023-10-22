@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Login.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { mainInstance } from '../../../utils/axios';
+import Button from '../../../components/Button';
+import Input from '../../../components/Edit/Input';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,8 +38,7 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     let body = {
       email,
       password,
@@ -55,33 +56,32 @@ const Login = () => {
           </div>
         </div>
         <div className="formContainer">
-          <form className="loginForm" onSubmit={handleSubmit}>
+          <form className="loginForm">
             <label htmlFor="email" />
-            <input
+            <Input
               type="email"
               placeholder="이메일"
               id="email"
               value={email}
               onChange={handleEmail}
-              required
+              required={true}
             />
             <label htmlFor="password" />
-            <input
+            <Input
               type="password"
               placeholder="비밀번호"
               id="password"
               value={password}
               onChange={handlePassword}
-              required
+              required={true}
             />
 
-            <button
-              type="submit"
-              className="btn"
+            <Button
+              text="로그인"
+              type="btn-long"
+              handleClick={handleClick}
               disabled={!isValid || password.length < 10}
-            >
-              로그인
-            </button>
+            />
           </form>
           <div className="loginOptions">
             <ul>

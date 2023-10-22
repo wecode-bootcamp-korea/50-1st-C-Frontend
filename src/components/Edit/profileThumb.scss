@@ -1,0 +1,16 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.profileThumb {
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid $theme-gray-strong;
+  }
+  .profile-comment {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -59,10 +59,7 @@
     }
     .phoneNumber {
       display: flex;
-      justify-content: space-between;
-      input {
-        display: inline-block;
-      }
+      justify-content: stretch;
     }
   }
   .birthdayInfo {

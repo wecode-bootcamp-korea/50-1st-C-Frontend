@@ -1,0 +1,16 @@
+@import 'src/styles/variable.scss';
+@import 'src/styles/mixin.scss';
+
+.textarea {
+  .content {
+    width: 456px;
+    height: 70vh;
+    border: 1px solid $theme-gray-normal;
+    border-radius: 6px;
+    resize: none;
+    padding: 15px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

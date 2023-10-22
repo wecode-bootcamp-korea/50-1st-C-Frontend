@@ -1,59 +1,14 @@
-import React, { useState } from 'react';
-import './PostEdit.scss';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { mainInstance } from '../../../utils/axios';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+import Edit from '../../../components/Edit/Edit';
 
 const PostEdit = () => {
-  const navigate = useNavigate();
-  const userName = localStorage.getItem('userName');
-  const profileImage = localStorage.getItem('profileImage');
-  const [editContent, setEditContent] = useState('');
   const postId = useParams();
-
-  const handlePost = (body) => {
-    mainInstance
-      .patch('writePost', { header: { id: postId.postid }, body: body })
-      .then((res) => {
-        if (res.message === 'EDITED SUCCESS') {
-          alert('글 수정 완료!');
-          navigate('/post');
-        } else {
-          alert('failed');
-        }
-      });
-  };
-
-  const handleClick = () => {
-    let body = {
-      content: editContent,
-    };
-    handlePost(body);
-  };
 
   return (
     <div className="postEdit">
-      <div className="writeContainer">
-        <img className="profileThumb" src={profileImage} alt="프로필" />
-
-        <div className="userContainer">
-          <p className="nickname">{userName}</p>
-          <textarea
-            className="content"
-            onChange={(e) => setEditContent(e.target.value)}
-            value={editContent}
-            placeholder="스레드를 시작하세요"
-            maxLength="150"
-          />
-        </div>
-      </div>
-      <div className="postAction">
-        <Link to="/post" className="btnBorder">
-          취소
-        </Link>
-        <button onClick={handleClick} className="btn">
-          수정
-        </button>
-      </div>
+      <Edit isEdit={true} postId={postId} />;
     </div>
   );
 };

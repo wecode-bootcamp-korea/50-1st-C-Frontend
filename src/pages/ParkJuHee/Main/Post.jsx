@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Post.scss';
+import ProfileThumb from '../../../components/Edit/ProfileThumb';
 
 const Post = ({
   nickname,
@@ -19,7 +20,7 @@ const Post = ({
       <div className="postList">
         <div className="writerDesktop">
           <div className="userContainer">
-            <img className="profileThumb" src={profileImage} alt="프로필" />
+            <ProfileThumb src={profileImage} name="image" />
             <p className="nickname">{nickname}</p>
           </div>
           <div className="editContainer">

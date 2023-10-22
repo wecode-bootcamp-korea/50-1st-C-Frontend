@@ -4,34 +4,32 @@ import './Register.scss';
 import OptionBox from './OptionBox';
 import { useNavigate } from 'react-router-dom';
 import { mainInstance } from '../../../utils/axios';
+import Button from '../../../components/Button';
+import Input from '../../../components/Edit/Input';
 
 const Register = () => {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState({
-    email: '',
-    password: '',
-    passwordConfirm: '',
-    userName: '',
-    phoneNumber: '',
-    isValid: true,
-  });
-  const { email, password, passwordConfirm, userName, phoneNumber, isValid } =
-    inputValue;
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirm, setPasswordConfirm] = useState('');
+  const [userName, setUserName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [isValid, setIsValid] = useState(false);
 
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setInputValue((prevState) => ({
-      ...prevState,
-      [name]: value,
-      isValid: !isValidEmail(value),
-    }));
-  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
 
-  const isValidEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailPattern.test(email);
+
+    setIsValid(emailPattern.test(email));
   };
 
+  const handlePhone = (e) => {
+    let phoneNum = e.target.value;
+    phoneNum = phoneNum.replace(/[^0-9.]/g, '');
+    phoneNum = phoneNum.replace(/(\d{4})(\d)/, '$1-$2');
+    setPhoneNumber(phoneNum.slice(0, 9));
+  };
   const handleRegister = (body) => {
     mainInstance.post('user/signup', { body: body }).then((res) => {
       if (res.message === 'SIGNUP SUCCESS') {
@@ -41,9 +39,7 @@ const Register = () => {
       }
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const handleClick = () => {
     if (password !== passwordConfirm) {
       return alert('비밀번호가 일치하지 않습니다.');
     }
@@ -75,7 +71,7 @@ const Register = () => {
     <div className="register">
       <div className="container">
         <div className="mainFormContainer">
-          <form className="registerForm" onSubmit={handleSubmit}>
+          <form className="registerForm">
             <div className="pageTitleInfo">
               <h1>회원가입</h1>
             </div>
@@ -85,35 +81,31 @@ const Register = () => {
                 <p className="required">필수사항</p>
               </div>
 
-              <input
+              <Input
                 type="email"
                 placeholder="이메일"
                 id="userEmail"
-                name="email"
                 value={email}
-                onChange={handleInput}
-                required
-                autoComplete="email"
+                onChange={handleEmail}
+                required={true}
               />
 
-              <input
+              <Input
                 type="password"
                 placeholder="비밀번호"
                 id="password"
-                name="password"
                 value={password}
-                onChange={handleInput}
-                required
+                onChange={(e) => setPassword(e.target.value)}
+                required={true}
               />
 
-              <input
+              <Input
                 type="password"
                 placeholder="비밀번호 확인"
                 id="passwordConfirm"
-                name="passwordConfirm"
                 value={passwordConfirm}
-                onChange={handleInput}
-                required
+                onChange={(e) => setPasswordConfirm(e.target.value)}
+                required={true}
               />
             </div>
 
@@ -122,15 +114,13 @@ const Register = () => {
                 <label htmlFor="name">닉네임과 프로필 이미지</label>
                 <p className="required">필수사항</p>
               </div>
-              <input
+              <Input
                 type="text"
                 placeholder="닉네임"
                 id="name"
-                name="userName"
                 value={userName}
-                onChange={handleInput}
-                autoComplete="name"
-                required
+                onChange={(e) => setUserName(e.target.value)}
+                required={true}
               />
             </div>
 
@@ -147,14 +137,13 @@ const Register = () => {
                     setPhoneFront={setPhoneFront}
                   />
                 </div>
-                <input
+                <Input
                   type="tel"
                   placeholder="휴대폰 번호를 입력해주세요."
                   id="phoneNumber"
-                  name="phoneNumber"
                   value={phoneNumber}
-                  maxLength="8"
-                  onChange={handleInput}
+                  onChange={handlePhone}
+                  required={false}
                 />
               </div>
             </div>
@@ -189,15 +178,12 @@ const Register = () => {
             </div>
 
             <div className="submitContainer">
-              <button
-                type="submit"
-                className="btn"
-                disabled={
-                  !isValid || password.length < 5 || passwordConfirm.length < 5
-                }
-              >
-                회원 가입
-              </button>
+              <Button
+                text="회원 가입"
+                type="btn-long"
+                handleClick={handleClick}
+                disabled={!isValid || password.length < 10}
+              />
             </div>
           </form>
         </div>

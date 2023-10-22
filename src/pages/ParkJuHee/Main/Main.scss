@@ -21,17 +21,25 @@
     }
   }
   .footer {
+    height: 10vh;
     position: fixed;
-    bottom: 20px;
-    right: 20%;
+    bottom: 0;
+    width: 100%;
     .writeContainer {
+      width: 512px;
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+      position: relative;
       .writeBtn {
+        position: absolute;
         text-align: center;
+        margin: 0 auto;
+        right: 0;
+        top: -8px;
         .btn {
-          display: block;
           padding: 20px;
-          width: 120px;
-          height: 56px;
+          display: block;
         }
       }
     }

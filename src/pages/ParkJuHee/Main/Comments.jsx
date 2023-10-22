@@ -1,5 +1,6 @@
 import React from 'react';
 import './Comments.scss';
+import ProfileThumb from '../../../components/Edit/ProfileThumb';
 
 const Comments = ({ key, nickname, comment, createdAt, profileImage }) => {
   return (
@@ -7,7 +8,7 @@ const Comments = ({ key, nickname, comment, createdAt, profileImage }) => {
       <div className="commentList">
         <div className="writerDesktop">
           <div className="userContainer">
-            <img className="profileThumb" src={profileImage} alt="프로필" />
+            <ProfileThumb src={profileImage} name="comment" />
             <div className="contentContainer">
               <p className="nickname">{nickname}</p>
               <p className="comment">{comment}</p>
